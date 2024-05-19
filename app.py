@@ -21,7 +21,7 @@ selected_data = data[data['Tanggal'] == pd.to_datetime(tanggal)]
 if not selected_data.empty:
     st.markdown("Renungan: " + selected_data.iloc[0]['Tanggal'].strftime("%d %B %Y"))
     st.markdown(f"""
-        <div style='padding: 20px; background-color: #f9f9f9; border-radius: 10px color: black;'>
+        <div style='padding: 20px; background-color: #f9f9f9; border-radius: 10px; color: black;'>
             {selected_data.iloc[0]['Konten']}
         </div>
     """, unsafe_allow_html=True)
