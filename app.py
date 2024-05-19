@@ -21,7 +21,7 @@ selected_data = data[data['Tanggal'] == pd.to_datetime(tanggal)]
 if not selected_data.empty:
     st.markdown("Renungan: " + selected_data.iloc[0]['Tanggal'].strftime("%d %B %Y"))
     st.markdown(f"""
-        <div style='padding: 20px; background-color: #f9f9f9; border-radius: 10px;'>
+        <div style='padding: 20px; background-color: #f9f9f9; border-radius: 10px color: black;'>
             {selected_data.iloc[0]['Konten']}
         </div>
     """, unsafe_allow_html=True)
@@ -30,5 +30,5 @@ else:
 
 # Footer
 st.markdown("<footer style='text-align: center; padding: 10px; position: fixed; left: 0; bottom: 0; width: 100%; background-color: #f0f2f6; color: black;'>"
-            "<p>© 2024 by Ps. Steven Y. Goni - GPdI Bethesda Matuari Waya.</p></footer>", 
+            "<p>© 2024 by Ps. Steven Y. Goni - BMW Church.</p></footer>", 
             unsafe_allow_html=True)
